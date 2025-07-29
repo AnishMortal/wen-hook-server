@@ -1,0 +1,5 @@
+com\bajajfinserv\dto\WebhookRequest.class
+com\bajajfinserv\AppRunner.class
+com\bajajfinserv\dto\SolutionRequest.class
+com\bajajfinserv\SpringBootAppApplication.class
+com\bajajfinserv\dto\WebhookResponse.class
