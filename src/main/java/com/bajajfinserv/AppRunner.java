@@ -62,7 +62,8 @@ public class AppRunner implements CommandLineRunner {
     private Mono<String> submitSolution(String webhookUrl, String token, SolutionRequest solution) {
         return webClient.post()
             .uri(webhookUrl)
-            .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
+            .header(HttpHeaders.AUTHORIZATION, token)
+            .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
             .bodyValue(solution)
             .retrieve()
             .bodyToMono(String.class);
